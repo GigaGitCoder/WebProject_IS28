@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  height: auto;
+}
+
+.container {
+  max-width: 900px;           /* Было 900px — можно поднять до 1200px или 100% */
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.header {
+  background: #4a90e2;
+  color: #fff;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;      /* Ставит элементы в колонку */
+  align-items: center;         /* Центрует по горизонтали */
+  gap: 0.5rem;                 /* Небольшой отступ между заголовком и навигацией */
+}
+
+.header__title {
+  font-weight: 5000;
+  font-size: 2.5rem;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.nav__link:hover,
+.nav__link--active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.content {
+  padding: 2rem 0;
+}
+
+.intro {
+  text-align: center;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.intro__title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro__text {
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+}
+
+.btn--primary {
+  background: #4a90e2;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  transition: background 0.3s;
+}
+
+.btn--primary:hover {
+  background: #357abd;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+
+.form {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.form__group {
+  margin-bottom: 1rem;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form__input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.converter, 
+.intro, 
+.contact {
+    margin-bottom: 100px
+}
+
+.converter__result,
+.converter__steps {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+}
+
+.converter__result {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.converter__steps ol {
+  padding-left: 1.2rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+  width: 100%;
+}
+
+.footer__text {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}

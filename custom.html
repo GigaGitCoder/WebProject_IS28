@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кастомные системы счисления</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page page--custom">
+  <header class="header">
+    <div class="container header__container">
+      <h1 class="header__title">Нумерика</h1>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+          <li class="nav__item"><a href="custom.html" class="nav__link nav__link--active">Кастомные системы</a></li>
+          <li class="nav__item"><a href="contact.html" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="content container">
+    <section class="converter">
+      <center>
+        <h2 class="converter__title">Конвертер систем счисления</h2>
+      </center>
+      <br>
+      <form id="customForm" class="form">
+        <div class="form__group">
+          <label for="number" class="form__label">Число</label>
+          <input type="text" id="number" class="form__input" placeholder="Например, 1A3" required>
+        </div>
+        <div class="form__group">
+          <label for="fromBase" class="form__label">Из системы (2–36)</label>
+          <input type="number" id="fromBase" class="form__input" min="2" max="36" value="16" required>
+        </div>
+        <div class="form__group">
+          <label for="toBase" class="form__label">В систему (2–36)</label>
+          <input type="number" id="toBase" class="form__input" min="2" max="36" value="10" required>
+        </div>
+        <button type="submit" class="btn btn--primary btn--block">Конвертировать</button>
+      </form>
+      <div id="customResult" class="converter__result"></div>
+      <div id="conversionSteps" class="converter__steps"></div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">© Компании "Нумерика", 2025</p>
+    </div>
+  </footer>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
